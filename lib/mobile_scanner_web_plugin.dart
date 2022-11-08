@@ -24,7 +24,8 @@ class MobileScannerWebPlugin {
       registrar,
     );
     final MobileScannerWebPlugin instance = MobileScannerWebPlugin();
-    WidgetsFlutterBinding.ensureInitialized();
+    // Removed for issue with Designer
+    // WidgetsFlutterBinding.ensureInitialized();
 
     channel.setMethodCallHandler(instance.handleMethodCall);
     event.setController(instance.controller);
